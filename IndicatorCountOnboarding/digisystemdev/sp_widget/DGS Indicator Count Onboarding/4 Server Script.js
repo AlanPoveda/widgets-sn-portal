@@ -10,10 +10,10 @@
 	data.sp_page = input.sp_page || options.sp_page || '';
 
 	data.filter = options.filter;
-	data.filter += "^sprint=" + input.sprint;
 	
-	if(input.sprint)
-		data.count = getRecordCount(data.table, data.filter);
+	
+	
+	data.count = getRecordCount(data.table, data.filter);
 
 	function getRecordCount(table, filter){
 		var ga = new GlideAggregate(table);
