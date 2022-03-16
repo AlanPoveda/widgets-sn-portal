@@ -1,0 +1,425 @@
+{
+    "instance": {
+        "name": "digisystemdev",
+        "url": "https://digisystemdev.service-now.com",
+        "g_ck": "a99251e01b1a051056252fc13b4bcb83d34441d29f4623031cfb9bc8aa174156de6435c1"
+    },
+    "action": "saveWidget",
+    "tableName": "sp_widget",
+    "name": "DGS: Indicator Count Onboarding",
+    "sys_id": "31a70cc91b96c51056252fc13b4bcbbc",
+    "widget": {
+        "template": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": -1,
+            "label": "Body HTML template",
+            "sys_readonly": false,
+            "type": "html_template",
+            "mandatory": false,
+            "displayValue": "<div class=\"container-icon {{options.css_class}}\">\n  \n  <div class=\"indicator\">\n    <span class=\"title label-indicator\">{{data.label}}</span>\n    <span class=\"title number-indicator\" ng-click=\"c.redirectPage(data.sp_page)\">{{data.count}}</span>\n   \n  </div>\n     \n</div>",
+            "readonly": false,
+            "hint": "",
+            "name": "template",
+            "attributes": {},
+            "choice": 0,
+            "value": "<div class=\"container-icon {{options.css_class}}\">\n  \n  <div class=\"indicator\">\n    <span class=\"title label-indicator\">{{data.label}}</span>\n    <span class=\"title number-indicator\" ng-click=\"c.redirectPage(data.sp_page)\">{{data.count}}</span>\n   \n  </div>\n     \n</div>",
+            "max_length": 65000,
+            "ed": {
+                "name": "template"
+            }
+        },
+        "css": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": -1,
+            "label": "CSS",
+            "sys_readonly": false,
+            "type": "css",
+            "mandatory": false,
+            "displayValue": ".title{\n  font-size: 16px;\n  h5{\n    margin: 0;\n  }\n}\t\n\n.container-icon{\n  width: 100%;\n  background: $panel-bg-color;\n  border-radius: 22px;\n  display: inline-block;\n  margin: 0 auto;\n  margin-top: 16px;\n  padding: 12px;\n  .indicator{\n    .label-indicator{\n      width: 100%;\n      float: left;\n      text-align: center;\n    }\n    .number-indicator{\n      width: 100%;\n      display: inline-block;\n      text-align: center;\n      font-size: 48px;\n      font-weight: bold;\n      color: $primary;\n    }\n  }\n}",
+            "readonly": false,
+            "hint": "",
+            "name": "css",
+            "attributes": {},
+            "choice": 0,
+            "value": ".title{\n  font-size: 16px;\n  h5{\n    margin: 0;\n  }\n}\t\n\n.container-icon{\n  width: 100%;\n  background: $brand-primary;\n  border-radius: 22px;\n  display: inline-block;\n  margin: 0 auto;\n  margin-top: 16px;\n  padding: 12px;\n  .indicator{\n    .label-indicator{\n      width: 100%;\n      float: left;\n      text-align: center;\n    }\n    .number-indicator{\n      width: 100%;\n      display: inline-block;\n      text-align: center;\n      font-size: 48px;\n      font-weight: bold;\n      color: $primary;\n    }\n  }\n}",
+            "max_length": 8000,
+            "ed": {
+                "name": "css"
+            }
+        },
+        "roles": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": 12,
+            "label": "Roles",
+            "sys_readonly": false,
+            "type": "user_roles",
+            "mandatory": false,
+            "displayValue": "",
+            "readonly": false,
+            "hint": "",
+            "name": "roles",
+            "attributes": {
+                "no_truncate": "true",
+                "update_exempt": "true",
+                "record_watcher_blacklist": "true"
+            },
+            "choice": 0,
+            "value": "",
+            "max_length": 255,
+            "ed": {
+                "name": "roles"
+            }
+        },
+        "link": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": -1,
+            "label": "Link",
+            "sys_readonly": false,
+            "type": "script",
+            "mandatory": false,
+            "displayValue": "function link(scope, element, attrs, controller) {\n  \n\t\n}",
+            "readonly": false,
+            "hint": "",
+            "name": "link",
+            "attributes": {
+                "client_script": "true"
+            },
+            "choice": 0,
+            "value": "function link(scope, element, attrs, controller) {\n  \n\t\n}",
+            "max_length": 65000,
+            "ed": {
+                "name": "link"
+            }
+        },
+        "description": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": -1,
+            "label": "Description",
+            "sys_readonly": false,
+            "type": "string",
+            "mandatory": false,
+            "displayValue": "",
+            "readonly": false,
+            "hint": "Defines what the widget does",
+            "name": "description",
+            "attributes": {
+                "edge_encryption_enabled": "true"
+            },
+            "choice": 0,
+            "value": "",
+            "max_length": 300,
+            "ed": {
+                "name": "description"
+            }
+        },
+        "demo_data": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": -1,
+            "label": "Demo data",
+            "sys_readonly": false,
+            "type": "json",
+            "mandatory": false,
+            "displayValue": "",
+            "readonly": false,
+            "hint": "",
+            "name": "demo_data",
+            "attributes": {},
+            "choice": 0,
+            "value": "",
+            "max_length": 8000,
+            "ed": {
+                "name": "demo_data"
+            }
+        },
+        "option_schema": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": -1,
+            "label": "Option schema",
+            "sys_readonly": false,
+            "type": "json",
+            "mandatory": false,
+            "displayValue": "[{\"hint\":\"Escolha a opção de visualização\",\"name\":\"display_layout\",\"section\":\"Presentation\",\"default_value\":\"inline-view\",\"label\":\"Display layout\",\"type\":\"choice\",\"choices\":[{\"label\":\"inline-view\",\"value\":\"inline-view\"},{\"label\":\"stylized-view\",\"value\":\"stylized-view\"}]},{\"hint\":\"Digite uma breve descrição\",\"name\":\"label\",\"section\":\"Presentation\",\"label\":\"Label\",\"type\":\"string\"},{\"name\":\"event\",\"section\":\"Behavior\",\"label\":\"Event\",\"type\":\"string\"},{\"name\":\"css_class\",\"section\":\"other\",\"label\":\"CSS Class\",\"type\":\"string\"}]",
+            "readonly": false,
+            "hint": "",
+            "name": "option_schema",
+            "attributes": {},
+            "choice": 0,
+            "value": "[{\"hint\":\"Escolha a opção de visualização\",\"name\":\"display_layout\",\"section\":\"Presentation\",\"default_value\":\"inline-view\",\"label\":\"Display layout\",\"type\":\"choice\",\"choices\":[{\"label\":\"inline-view\",\"value\":\"inline-view\"},{\"label\":\"stylized-view\",\"value\":\"stylized-view\"}]},{\"hint\":\"Digite uma breve descrição\",\"name\":\"label\",\"section\":\"Presentation\",\"label\":\"Label\",\"type\":\"string\"},{\"name\":\"event\",\"section\":\"Behavior\",\"label\":\"Event\",\"type\":\"string\"},{\"name\":\"css_class\",\"section\":\"other\",\"label\":\"CSS Class\",\"type\":\"string\"}]",
+            "max_length": 8000,
+            "ed": {
+                "name": "option_schema"
+            }
+        },
+        "script": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": -1,
+            "label": "Server script",
+            "sys_readonly": false,
+            "type": "script",
+            "mandatory": false,
+            "displayValue": "(function() {\n\t/* populate the 'data' object */\n\t/* e.g., data.table = $sp.getValue('table'); */\n\tdata.label = input.label|| options.label;\n\tdata.label = gs.getMessage(data.label);\n\tdata.count = 0;\n\t\n\tdata.table = input.table || options.table;\n\tdata.sp_page = input.sp_page || options.sp_page || '';\n\n\tdata.filter = options.filter;\n\tdata.filter += \"^sprint=\" + input.sprint;\n\t\n\tif(input.sprint)\n\t\tdata.count = getRecordCount(data.table, data.filter);\n\n\tfunction getRecordCount(table, filter){\n\t\tvar ga = new GlideAggregate(table);\n\t\tga.addAggregate('COUNT');\n\t\tga.addEncodedQuery(filter);\n\t\tga.query();\n\t\tif(ga.next())\n\t\t\treturn  ga.getAggregate('COUNT');\t\n\t}\n\n\n})();",
+            "readonly": false,
+            "hint": "",
+            "name": "script",
+            "attributes": {},
+            "choice": 0,
+            "value": "(function() {\n\t/* populate the 'data' object */\n\t/* e.g., data.table = $sp.getValue('table'); */\n\tdata.label = input.label|| options.label;\n\tdata.label = gs.getMessage(data.label);\n\tdata.count = 0;\n\t\n\tdata.table = input.table || options.table;\n\tdata.sp_page = input.sp_page || options.sp_page || '';\n\n\tdata.filter = options.filter;\n\tdata.filter += \"^sprint=\" + input.sprint;\n\t\n\tif(input.sprint)\n\t\tdata.count = getRecordCount(data.table, data.filter);\n\n\tfunction getRecordCount(table, filter){\n\t\tvar ga = new GlideAggregate(table);\n\t\tga.addAggregate('COUNT');\n\t\tga.addEncodedQuery(filter);\n\t\tga.query();\n\t\tif(ga.next())\n\t\t\treturn  ga.getAggregate('COUNT');\t\n\t}\n\n\n})();",
+            "max_length": 65000,
+            "ed": {
+                "name": "script"
+            }
+        },
+        "has_preview": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": -7,
+            "label": "Has preview",
+            "sys_readonly": false,
+            "type": "boolean",
+            "mandatory": false,
+            "displayValue": "false",
+            "readonly": false,
+            "hint": "Defines whether preview data is available",
+            "name": "has_preview",
+            "attributes": {},
+            "choice": 0,
+            "value": "false",
+            "max_length": 40,
+            "ed": {
+                "name": "has_preview"
+            }
+        },
+        "public": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": -7,
+            "label": "Public",
+            "sys_readonly": false,
+            "type": "boolean",
+            "mandatory": false,
+            "displayValue": "false",
+            "readonly": false,
+            "hint": "Widget publicly available to unauthenticated users",
+            "name": "public",
+            "attributes": {
+                "update_exempt": "true"
+            },
+            "choice": 0,
+            "value": "false",
+            "max_length": 40,
+            "ed": {
+                "name": "public"
+            }
+        },
+        "docs": {
+            "sys_mandatory": false,
+            "visible": true,
+            "table_attributes": {
+                "update_synch": "true",
+                "synch_attachments": "true"
+            },
+            "dbType": 12,
+            "label": "Docs",
+            "sys_readonly": false,
+            "type": "reference",
+            "mandatory": false,
+            "refTable": "sp_documentation",
+            "reference_type": "table",
+            "displayValue": "",
+            "readonly": false,
+            "hint": "",
+            "name": "docs",
+            "attributes": {
+                "encode_utf8": "false"
+            },
+            "reference_key": "sys_id",
+            "readonlyClickthrough": false,
+            "choice": 0,
+            "value": "",
+            "max_length": 32,
+            "ed": {
+                "reference": "sp_documentation",
+                "searchField": "title",
+                "defaultOperator": "STARTSWITH",
+                "name": "docs"
+            }
+        },
+        "client_script": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": -1,
+            "label": "Client controller",
+            "sys_readonly": false,
+            "type": "script",
+            "mandatory": false,
+            "displayValue": "function($location, $rootScope) {\n\t/* widget controller */\n\tvar c = this;\n\n\n\tc.redirectPage = function(page){\n\t\t$location.url(\"?id=\" + page + \"&account=\" + c.data.account + \"&filter=\" + c.data.filter);\n\t};\n\n\t$rootScope.$on('select.sprint', function(evt, data){\n\t\tc.data.sprint =  data;\n\t\tc.server.update();\n\t});\n\n\t$rootScope.$on('select.company', function(evt, data){\n\t\tc.data.account = data;\n\t\tc.server.update();\n\t});\n\n\n\n}",
+            "readonly": false,
+            "hint": "",
+            "name": "client_script",
+            "attributes": {
+                "client_script": "true"
+            },
+            "choice": 0,
+            "value": "function($location, $rootScope) {\n\t/* widget controller */\n\tvar c = this;\n\n\n\tc.redirectPage = function(page){\n\t\t$location.url(\"?id=\" + page + \"&account=\" + c.data.account + \"&filter=\" + c.data.filter);\n\t};\n\n\t$rootScope.$on('select.sprint', function(evt, data){\n\t\tc.data.sprint =  data;\n\t\tc.server.update();\n\t});\n\n\t$rootScope.$on('select.company', function(evt, data){\n\t\tc.data.account = data;\n\t\tc.server.update();\n\t});\n\n\n\n}",
+            "max_length": 8000,
+            "ed": {
+                "name": "client_script"
+            }
+        },
+        "data_table": {
+            "sys_mandatory": true,
+            "visible": true,
+            "dbType": 12,
+            "default_value": "sp_instance",
+            "label": "Data table",
+            "sys_readonly": false,
+            "type": "table_name",
+            "mandatory": true,
+            "displayValue": "sp_instance_table",
+            "readonly": false,
+            "hint": "",
+            "name": "data_table",
+            "attributes": {
+                "base_table": "sp_instance",
+                "base_start": "true"
+            },
+            "choice": 0,
+            "choices": [],
+            "value": "sp_instance_table",
+            "max_length": 80,
+            "ed": {
+                "name": "data_table"
+            }
+        },
+        "name": {
+            "sys_mandatory": true,
+            "visible": true,
+            "dbType": 12,
+            "label": "Name",
+            "sys_readonly": false,
+            "type": "translated_field",
+            "mandatory": true,
+            "displayValue": "DGS: Indicator Count Onboarding",
+            "readonly": false,
+            "hint": "",
+            "name": "name",
+            "attributes": {},
+            "choice": 0,
+            "value": "DGS: Indicator Count Onboarding",
+            "max_length": 40,
+            "ed": {
+                "name": "name"
+            }
+        },
+        "sys_scope": {
+            "sys_mandatory": false,
+            "visible": true,
+            "table_attributes": {
+                "metadata_link_exempt": "true"
+            },
+            "dbType": 12,
+            "label": "Application",
+            "sys_readonly": true,
+            "type": "reference",
+            "mandatory": false,
+            "refTable": "sys_scope",
+            "reference_type": "table",
+            "displayValue": "Global",
+            "readonly": true,
+            "hint": "Application containing this record",
+            "name": "sys_scope",
+            "attributes": {
+                "list_force_default": "true",
+                "readonly_clickthrough": "true",
+                "ignore_filter_on_new": "true"
+            },
+            "reference_key": "sys_id",
+            "readonlyClickthrough": true,
+            "choice": 0,
+            "value": "global",
+            "max_length": 32,
+            "ed": {
+                "reference": "sys_scope",
+                "searchField": "name",
+                "defaultOperator": "STARTSWITH",
+                "name": "sys_scope"
+            }
+        },
+        "id": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": 12,
+            "label": "ID",
+            "sys_readonly": false,
+            "type": "string",
+            "mandatory": false,
+            "displayValue": "dgs__indicator_count_onboarding",
+            "readonly": false,
+            "hint": "Identifier for $sp.embedWidget()",
+            "name": "id",
+            "attributes": {
+                "edge_encryption_enabled": "true"
+            },
+            "choice": 0,
+            "value": "dgs__indicator_count_onboarding",
+            "max_length": 40,
+            "ed": {
+                "name": "id"
+            }
+        },
+        "field_list": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dependentField": "data_table",
+            "dbType": -1,
+            "label": "Fields",
+            "sys_readonly": false,
+            "type": "field_list",
+            "mandatory": false,
+            "displayValue": "table,filter,sp_page",
+            "readonly": false,
+            "hint": "",
+            "name": "field_list",
+            "attributes": {
+                "is_multi_text": "false"
+            },
+            "choice": 0,
+            "value": "table,filter,sp_page",
+            "max_length": 1000,
+            "ed": {
+                "dependent_value": "sp_instance_table",
+                "name": "field_list"
+            }
+        },
+        "controller_as": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": 12,
+            "label": "controllerAs",
+            "sys_readonly": false,
+            "type": "string",
+            "mandatory": false,
+            "displayValue": "c",
+            "readonly": false,
+            "hint": "Identifier name for a reference to the controller in the directive's scope",
+            "name": "controller_as",
+            "attributes": {
+                "edge_encryption_enabled": "true"
+            },
+            "choice": 0,
+            "value": "c",
+            "max_length": 100,
+            "ed": {
+                "name": "controller_as"
+            }
+        }
+    }
+}
