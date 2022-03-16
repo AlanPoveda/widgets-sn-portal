@@ -3,6 +3,7 @@
 	/* e.g., data.table = $sp.getValue('table'); */
 	data.label = input.label|| options.label;
 	data.label = gs.getMessage(data.label);
+	data.image = options.image_url;
 	data.count = 0;
 	
 	data.table = input.table || options.table;

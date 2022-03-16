@@ -43,6 +43,9 @@
     img {
       position: absolute;
       left: 20px;
+      
+      width: 93px;
+      height: 93px;
     }
     button {
         position: absolute;
@@ -60,5 +63,13 @@
         &:hover {
             background: #67cfee;
         }
+        .arrow-image {
+            position: absolute;
+            top: 35%;
+            width: 22px;
+            height: 46px;
+        }
     }
 }
+
+
