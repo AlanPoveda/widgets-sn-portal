@@ -1,7 +1,7 @@
 (function() {
 	/* populate the 'data' object */
 	/* e.g., data.table = $sp.getValue('table'); */
-	data.label = input.label.toUpperCase()|| options.label.toUpperCase();
+	data.label = input.label || options.label;
 	data.label = gs.getMessage(data.label).toUpperCase();
 	data.image = options.image_url;
 	data.count = 0;
@@ -9,9 +9,8 @@
 	data.table = input.table || options.table;
 	data.sp_page = input.sp_page || options.sp_page || '';
 
-	data.filter = options.filter;
-	
-	
+	data.loggedUser = gs.getUserID().toString();
+	data.filter = 'request.opened_by='+data.loggedUser+'^'+options.filter;
 	
 	data.count = getRecordCount(data.table, data.filter);
 

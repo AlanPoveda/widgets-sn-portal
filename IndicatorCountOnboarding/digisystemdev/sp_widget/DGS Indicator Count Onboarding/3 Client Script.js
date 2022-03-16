@@ -17,6 +17,7 @@ function($location, $rootScope) {
 		c.server.update();
 	});
 
+	console.log(c.data.loggedUser);
 
 
 }
