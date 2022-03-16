@@ -1,55 +1,63 @@
-.title {
+/*.title {
     font-size: 16px;
-    h5 {
-        margin: 0;
-    }
-}
+    flex-grow: 0;
+
+    flex-shrink: 0;
+    flex-basis: 50px;
+}*/
 
 .container-icon {
     width: 308px;
     height: 135px;
     
-    margin: 0 auto;
-    margin-top: 16px;
-    padding: 12px;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     background: $brand-primary;
     border-radius: 8px;
 
-    position: absolute;
-
     box-shadow: 3px 3px 5px;
 
     .indicator {
-      padding-left: 3rem;
+        padding-left: 25%;
+        font-family: $font-family-titles;
+        color: $action-primary-color;
+
+        flex-grow: 0;
+
+        flex-shrink: 0;
+        flex-basis: 50px;
+
+        font-size: 16px;
         .label-indicator {
             width: 100%;
             float: left;
-            text-align: center;
+
+            font-weight: 100;
+            font-size: 13px;
+            max-width: 100px;
         }
         .number-indicator {
             width: 100%;
             display: inline-block;
-            text-align: center;
+
             font-size: 48px;
             font-weight: bold;
-            color: $action-primary-color;
         }
     }
     img {
-      position: absolute;
-      left: 20px;
-      
-      width: 93px;
-      height: 93px;
+        position: absolute;
+        left: 25px;
+
+        width: 93px;
+        height: 93px;
     }
     button {
         position: absolute;
-        right: 0;
+        right: 6.7rem;
 
         width: 58px;
         height: 135px;
@@ -57,7 +65,7 @@
         border-radius: 0px 8px 8px 0px;
         border: none;
         transition: 0.2s;
-        
+
         color: $action-primary-color;
 
         &:hover {
@@ -72,4 +80,7 @@
     }
 }
 
-
+.ng-binding {
+    margin: 0;
+    height: auto;
+}

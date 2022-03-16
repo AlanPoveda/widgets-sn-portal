@@ -1,13 +1,16 @@
 <div class="container-icon {{options.css_class}}">
     <img src="{{data.image}}" />
     <div class="indicator">
-        <span class="title label-indicator">{{data.label}}</span>
+        <span class="label-indicator">{{data.label}}</span>
+
         <span
-            class="title number-indicator"
+            class="number-indicator"
             ng-click="c.redirectPage(data.sp_page)"
         >
             {{data.count}}
         </span>
+       
     </div>
-    <button><img src="arrow-right.png" class="arrow-image"/></button>
+    <button><img src="arrow-right.png" class="arrow-image" /></button>
+   
 </div>

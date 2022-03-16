@@ -1,8 +1,8 @@
 (function() {
 	/* populate the 'data' object */
 	/* e.g., data.table = $sp.getValue('table'); */
-	data.label = input.label|| options.label;
-	data.label = gs.getMessage(data.label);
+	data.label = input.label.toUpperCase()|| options.label.toUpperCase();
+	data.label = gs.getMessage(data.label).toUpperCase();
 	data.image = options.image_url;
 	data.count = 0;
 	
