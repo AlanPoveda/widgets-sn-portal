@@ -2,7 +2,7 @@
     "instance": {
         "name": "digisystemdev",
         "url": "https://digisystemdev.service-now.com",
-        "g_ck": "a99251e01b1a051056252fc13b4bcb83d34441d29f4623031cfb9bc8aa174156de6435c1"
+        "g_ck": "e82496b51b924d10f087a79fe54bcb5f642a26c13a7d113923a24e3870546c958b982bd5"
     },
     "action": "saveWidget",
     "tableName": "sp_widget",
@@ -43,7 +43,7 @@
             "name": "css",
             "attributes": {},
             "choice": 0,
-            "value": ".container-icon {\n    width: 308px;\n    height: 135px;\n    position: relative;\n\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n\n    background: $brand-primary;\n    border-radius: 8px;\n\n    box-shadow: 3px 3px 5px;\n\n    .indicator {\n        padding-left: 25%;\n        font-family: $font-family-titles;\n        color: $action-primary-color;\n\n        flex-grow: 0;\n\n        flex-shrink: 0;\n        flex-basis: 50px;\n\n        font-size: 16px;\n        .label-indicator {\n            width: 100%;\n            float: left;\n\n            font-weight: 100;\n            font-size: 13px;\n            max-width: 100px;\n        }\n        .number-indicator {\n            width: 100%;\n            display: inline-block;\n\n            font-size: 48px;\n            font-weight: bold;\n        }\n    }\n    img {\n        position: absolute;\n        left: 25px;\n\n        width: 93px;\n        height: 93px;\n    }\n    button {\n        position: absolute;\n        right: 0;\n\n        width: 58px;\n        height: 135px;\n        background: $action-primary-bg;\n        border-radius: 0px 8px 8px 0px;\n        border: none;\n        transition: 0.2s;\n\n        color: $action-primary-color;\n\n        &:hover {\n            background: #67cfee;\n        }\n        .arrow-image {\n            position: absolute;\n            top: 35%;\n            width: 22px;\n            height: 46px;\n        }\n    }\n}\n\n\n\n\n@media screen and (max-width: 770px){\n    .container-icon {\n        width: 80%;\n    margin: 0 auto;\n      \n    }\n  }\n  \n  @media screen and (min-width: 768px) and (max-width: 991px){\n    .container-icon {\n        margin: 0 auto;\n    margin-top: 9vh;\n    }\n  }\n\n  @media screen and (min-width: 390px) and (max-width: 767px){\n    .container-icon {\n        margin: 0 auto;\n    margin-top: 9vh;\n  \n    }\n  }",
+            "value": ".container-icon {\n    width: 308px;\n    height: 135px;\n    position: relative;\n\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n\n    background: $brand-primary;\n    border-radius: 8px;\n\n    box-shadow: 3px 3px 5px;\n\n    .indicator {\n     \t\talign-itens: center;\n        font-family: $font-family-titles;\n        color: $action-primary-color;\n\n\n        font-size: 16px;\n      \n        .label-indicator {\n          \theight: auto;\n            width: 100%;\n            float: left;\n\n            font-weight: 100;\n            font-size: 13px;\n            max-width: 100px;\n        }\n      \n        .number-indicator {\n            width: 100%;\n            display: inline-block;\n\n            font-size: 48px;\n            font-weight: bold;\n        }\n      \n    }\n    img {\n        position: absolute;\n        left: 25px;\n\n        width: 93px;\n        height: 93px;\n    }\n    button {\n        position: absolute;\n        right: 0;\n\n        width: 58px;\n        height: 135px;\n        background: $action-primary-bg;\n        border-radius: 0px 8px 8px 0px;\n        border: none;\n        transition: 0.2s;\n\n        color: $action-primary-color;\n\n        &:hover {\n            background: #67cfee;\n        }\n        .arrow-image {\n            position: absolute;\n            top: 35%;\n            width: 22px;\n            height: 46px;\n        }\n    }\n}\n\n\n\n\n@media screen and (max-width: 770px){\n    .container-icon {\n        width: 80%;\n    margin: 0 auto;\n      \n    }\n  }\n  \n  @media screen and (min-width: 768px) and (max-width: 991px){\n    .container-icon {\n        margin: 0 auto;\n    margin-top: 9vh;\n    }\n  }\n\n  @media screen and (min-width: 390px) and (max-width: 767px){\n    .container-icon {\n        margin: 0 auto;\n    margin-top: 9vh;\n  \n    }\n  }",
             "max_length": 8000,
             "ed": {
                 "name": "css"
@@ -337,6 +337,7 @@
             "hint": "Application containing this record",
             "name": "sys_scope",
             "attributes": {
+                "encode_utf8": "false",
                 "list_force_default": "true",
                 "readonly_clickthrough": "true",
                 "ignore_filter_on_new": "true"

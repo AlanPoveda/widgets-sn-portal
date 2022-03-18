@@ -6,6 +6,8 @@
 	data.image = options.image_url;
 	data.count = 0;
 	
+	data.groupSelected = options.group_selected;
+
 	data.table = input.table || options.table;
 	data.sp_page = input.sp_page || options.sp_page || '';
 

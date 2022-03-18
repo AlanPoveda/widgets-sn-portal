@@ -4,7 +4,7 @@ function($location, $rootScope) {
 
 
 	c.redirectPage = function(page){
-		$location.url("?id=" + page + "&account=" + c.data.account + "&filter=" + c.data.filter);
+		$location.url("?id=" + page + "&group_selected=" + c.data.groupSelected);
 	};
 
 	$rootScope.$on('select.sprint', function(evt, data){

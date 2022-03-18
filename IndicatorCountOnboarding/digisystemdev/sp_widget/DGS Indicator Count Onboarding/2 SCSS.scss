@@ -14,24 +14,23 @@
     box-shadow: 3px 3px 5px;
 
     .indicator {
-        padding-left: 25%;
+        position: absolute;
+        left: 45%;
+
         font-family: $font-family-titles;
         color: $action-primary-color;
-
-        flex-grow: 0;
-
-        flex-shrink: 0;
-        flex-basis: 50px;
-
         font-size: 16px;
+
         .label-indicator {
             width: 100%;
+            height: 2.6rem;
             float: left;
 
             font-weight: 100;
             font-size: 13px;
             max-width: 100px;
         }
+
         .number-indicator {
             width: 100%;
             display: inline-block;
@@ -40,6 +39,7 @@
             font-weight: bold;
         }
     }
+
     img {
         position: absolute;
         left: 25px;
@@ -47,53 +47,53 @@
         width: 93px;
         height: 93px;
     }
-    button {
-        position: absolute;
-        right: 0;
 
-        width: 58px;
-        height: 135px;
-        background: $action-primary-bg;
-        border-radius: 0px 8px 8px 0px;
-        border: none;
-        transition: 0.2s;
-
-        color: $action-primary-color;
-
-        &:hover {
-            background: #67cfee;
-        }
-        .arrow-image {
+   
+        
+        button {
             position: absolute;
-            top: 35%;
-            width: 22px;
-            height: 46px;
+            right: 0;
+           
+
+            width: 58px;
+            height: 135px;
+            background: $action-primary-bg;
+            border-radius: 0px 8px 8px 0px;
+            border: none;
+            transition: 0.2s;
+
+            color: $action-primary-color;
+
+            &:hover {
+                background: #67cfee;
+            }
+            .arrow-image {
+                position: absolute;
+                top: 35%;
+                width: 22px;
+                height: 46px;
+            }
         }
+    
+}
+
+@media screen and (max-width: 770px) {
+    .container-icon {
+        width: 80%;
+        margin: 0 auto;
     }
 }
 
-
-
-
-@media screen and (max-width: 770px){
-    .container-icon {
-        width: 80%;
-    margin: 0 auto;
-      
-    }
-  }
-  
-  @media screen and (min-width: 768px) and (max-width: 991px){
+@media screen and (min-width: 768px) and (max-width: 991px) {
     .container-icon {
         margin: 0 auto;
-    margin-top: 9vh;
+        margin-top: 9vh;
     }
-  }
+}
 
-  @media screen and (min-width: 390px) and (max-width: 767px){
+@media screen and (min-width: 390px) and (max-width: 767px) {
     .container-icon {
         margin: 0 auto;
-    margin-top: 9vh;
-  
+        margin-top: 9vh;
     }
-  }
+}
