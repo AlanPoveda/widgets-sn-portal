@@ -1,0 +1,1 @@
+[{"name":"welcome_word","section":"Presentation","default_value":"Olá","label":"Welcome Word","type":"string"},{"name":"url_first_button","section":"other","label":"URl First Button","type":"string"},{"name":"url_second_button","section":"other","label":"URL Second Button","type":"string"}]

@@ -6,8 +6,8 @@
     },
     "action": "saveWidget",
     "tableName": "sp_widget",
-    "name": "DGS: Indicator Count Onboarding",
-    "sys_id": "31a70cc91b96c51056252fc13b4bcbbc",
+    "name": "DGS: Onboarding Homepage Title",
+    "sys_id": "c79543f41b9a8510f087a79fe54bcb2c",
     "widget": {
         "template": {
             "sys_mandatory": false,
@@ -17,13 +17,13 @@
             "sys_readonly": false,
             "type": "html_template",
             "mandatory": false,
-            "displayValue": "<div class=\"container-icon {{options.css_class}}\">\n    <img src=\"{{data.image}}\" />\n    <div class=\"indicator\">\n        <span class=\"label-indicator\">{{data.label}}</span>\n\n        <span class=\"number-indicator\" ng-click=\"c.redirectPage(data.sp_page)\">\n            {{data.count}}\n        </span>\n    </div>\n\n    <button ng-click=\"c.redirectPage(data.sp_page)\">\n        <img src=\"arrow-right.png\" class=\"arrow-image\" />\n    </button>\n</div>\n",
+            "displayValue": "<div class=\"homepage_title\">\n    <div class=\"title\">\n        <h1 class=\"call\">{{data.welcome}} {{data.username}}</h1>\n        <div class=\"actions\">\n            <a href=\"{{data.urlFirstButton}}\">\n                <button class=\"btn btn-primary btn-report\">\n                    ${Open a vacancy}\n                </button>\n            </a>\n            <a href=\"{{data.urlSecondButton}}\">\n                <button class=\"btn btn-secondary btn-follow\">\n                    ${Follow up request}\n                </button>\n            </a>\n        </div>\n    </div>\n</div>\n",
             "readonly": false,
             "hint": "",
             "name": "template",
             "attributes": {},
             "choice": 0,
-            "value": "<div class=\"container-icon {{options.css_class}}\">\n    <img src=\"{{data.image}}\" />\n    <div class=\"indicator\">\n        <span class=\"label-indicator\">{{data.label}}</span>\n\n        <span class=\"number-indicator\" ng-click=\"c.redirectPage(data.sp_page)\">\n            {{data.count}}\n        </span>\n    </div>\n\n    <button ng-click=\"c.redirectPage(data.sp_page)\">\n        <img src=\"arrow-right.png\" class=\"arrow-image\" />\n    </button>\n</div>\n",
+            "value": "<div class=\"homepage_title\">\n    <div class=\"title\">\n        <h1 class=\"call\">{{data.welcome}} {{data.username}}</h1>\n        <div class=\"actions\">\n            <a href=\"{{data.urlFirstButton}}\">\n                <button class=\"btn btn-primary btn-report\">\n                    ${Open a vacancy}\n                </button>\n            </a>\n            <a href=\"{{data.urlSecondButton}}\">\n                <button class=\"btn btn-secondary btn-follow\">\n                    ${Follow up request}\n                </button>\n            </a>\n        </div>\n    </div>\n</div>\n",
             "max_length": 65000,
             "ed": {
                 "name": "template"
@@ -37,13 +37,13 @@
             "sys_readonly": false,
             "type": "css",
             "mandatory": false,
-            "displayValue": ".container-icon {\n    width: 308px;\n    height: 135px;\n    position: relative;\n\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n\n    background: $brand-primary;\n    border-radius: 8px;\n\n    box-shadow: 3px 3px 5px;\n\n    .indicator {\n        position: absolute;\n        left: 45%;\n\n        font-family: $font-family-titles;\n        color: $action-primary-color;\n        font-size: 16px;\n\n        .label-indicator {\n            width: 100px;\n            height: 2.6rem;\n            float: left;\n\n            font-weight: 100;\n            font-size: 13px;\n            //max-width: 100px;\n        }\n\n        .number-indicator {\n            width: 100%;\n            display: inline-block;\n\n            font-size: 48px;\n            font-weight: bold;\n        }\n    }\n\n    img {\n        position: absolute;\n        left: 25px;\n\n        width: 93px;\n        height: 93px;\n    }\n\n   \n        \n        button {\n            position: absolute;\n            right: 0;\n           \n\n            width: 58px;\n            height: 135px;\n            background: $action-primary-bg;\n            border-radius: 0px 8px 8px 0px;\n            border: none;\n            transition: 0.2s;\n\n            color: $action-primary-color;\n\n            &:hover {\n                background: #67cfee;\n            }\n            .arrow-image {\n                position: absolute;\n                top: 35%;\n                width: 22px;\n                height: 46px;\n            }\n        }\n    \n}\n\n@media screen and (max-width: 770px) {\n    .container-icon {\n        margin: 0 auto;\n    }\n}\n\n@media screen and (min-width: 768px) and (max-width: 991px) {\n    .container-icon {\n        margin: 0 auto;\n        margin-top: 9vh;\n    }\n}\n\n@media screen and (min-width: 390px) and (max-width: 767px) {\n    .container-icon {\n        margin: 0 auto;\n        margin-top: 9vh;\n    }\n}\n",
+            "displayValue": ".homepage_title{\n  .title{\n    padding: 10vh 0;\n    color: $text-banner-color;\n    max-width: 100%;\n\n    h1{\n      margin: 0;\n      font-size: 300%;\n    }\n    h3{\n      margin: 0;\n      margin-top: 12px;\n      font-weight: 100;\n      font-size: 200%;\n\n    }\n    .actions{\n      padding: 12px 0 0 0;\n      .btn{\n      \tmargin-right: 8px;\n        text-transform: uppercase;\n      }\n    }\n  }\n}\n\na {\n  color: $",
             "readonly": false,
             "hint": "",
             "name": "css",
             "attributes": {},
             "choice": 0,
-            "value": ".container-icon {\n    width: 308px;\n    height: 135px;\n    position: relative;\n\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n\n    background: $brand-primary;\n    border-radius: 8px;\n\n    box-shadow: 3px 3px 5px;\n\n    .indicator {\n        position: absolute;\n        left: 45%;\n\n        font-family: $font-family-titles;\n        color: $action-primary-color;\n        font-size: 16px;\n\n        .label-indicator {\n            width: 100px;\n            height: 2.6rem;\n            float: left;\n\n            font-weight: 100;\n            font-size: 13px;\n            //max-width: 100px;\n        }\n\n        .number-indicator {\n            width: 100%;\n            display: inline-block;\n\n            font-size: 48px;\n            font-weight: bold;\n        }\n    }\n\n    img {\n        position: absolute;\n        left: 25px;\n\n        width: 93px;\n        height: 93px;\n    }\n\n   \n        \n        button {\n            position: absolute;\n            right: 0;\n           \n\n            width: 58px;\n            height: 135px;\n            background: $action-primary-bg;\n            border-radius: 0px 8px 8px 0px;\n            border: none;\n            transition: 0.2s;\n\n            color: $action-primary-color;\n\n            &:hover {\n                background: #67cfee;\n            }\n            .arrow-image {\n                position: absolute;\n                top: 35%;\n                width: 22px;\n                height: 46px;\n            }\n        }\n    \n}\n\n@media screen and (max-width: 770px) {\n    .container-icon {\n        margin: 0 auto;\n    }\n}\n\n@media screen and (min-width: 768px) and (max-width: 991px) {\n    .container-icon {\n        margin: 0 auto;\n        margin-top: 9vh;\n    }\n}\n\n@media screen and (min-width: 390px) and (max-width: 767px) {\n    .container-icon {\n        margin: 0 auto;\n        margin-top: 9vh;\n    }\n}\n",
+            "value": ".homepage_title{\n  .title{\n    padding: 10vh 0;\n    color: $text-banner-color;\n    max-width: 100%;\n\n    h1{\n      margin: 0;\n      font-size: 300%;\n    }\n    h3{\n      margin: 0;\n      margin-top: 12px;\n      font-weight: 100;\n      font-size: 200%;\n\n    }\n    .actions{\n      padding: 12px 0 0 0;\n      .btn{\n      \tmargin-right: 8px;\n        text-transform: uppercase;\n      }\n    }\n  }\n}\n\na {\n  color: $",
             "max_length": 8000,
             "ed": {
                 "name": "css"
@@ -81,7 +81,7 @@
             "sys_readonly": false,
             "type": "script",
             "mandatory": false,
-            "displayValue": "function link(scope, element, attrs, controller) {\n  \n\t\n}",
+            "displayValue": "function link(scope, element, attrs, controller) {\r  \r}",
             "readonly": false,
             "hint": "",
             "name": "link",
@@ -89,7 +89,7 @@
                 "client_script": "true"
             },
             "choice": 0,
-            "value": "function link(scope, element, attrs, controller) {\n  \n\t\n}",
+            "value": "function link(scope, element, attrs, controller) {\r  \r}",
             "max_length": 65000,
             "ed": {
                 "name": "link"
@@ -145,13 +145,13 @@
             "sys_readonly": false,
             "type": "json",
             "mandatory": false,
-            "displayValue": "[{\"hint\":\"Escolha a opção de visualização\",\"name\":\"display_layout\",\"section\":\"Presentation\",\"default_value\":\"inline-view\",\"label\":\"Display layout\",\"type\":\"choice\",\"choices\":[{\"label\":\"inline-view\",\"value\":\"inline-view\"},{\"label\":\"stylized-view\",\"value\":\"stylized-view\"}]},{\"hint\":\"Digite uma breve descrição\",\"name\":\"label\",\"section\":\"Presentation\",\"label\":\"Label\",\"type\":\"string\"},{\"name\":\"event\",\"section\":\"Behavior\",\"label\":\"Event\",\"type\":\"string\"},{\"name\":\"css_class\",\"section\":\"other\",\"label\":\"CSS Class\",\"type\":\"string\"},{\"name\":\"image_url\",\"section\":\"other\",\"label\":\"Image Url\",\"type\":\"string\"},{\"name\":\"group_selected\",\"section\":\"other\",\"label\":\"Group selected\",\"type\":\"string\"}]",
+            "displayValue": "[{\"name\":\"welcome_word\",\"section\":\"Presentation\",\"default_value\":\"Olá\",\"label\":\"Welcome Word\",\"type\":\"string\"},{\"name\":\"url_first_button\",\"section\":\"other\",\"label\":\"URl First Button\",\"type\":\"string\"},{\"name\":\"url_second_button\",\"section\":\"other\",\"label\":\"URL Second Button\",\"type\":\"string\"}]",
             "readonly": false,
             "hint": "",
             "name": "option_schema",
             "attributes": {},
             "choice": 0,
-            "value": "[{\"hint\":\"Escolha a opção de visualização\",\"name\":\"display_layout\",\"section\":\"Presentation\",\"default_value\":\"inline-view\",\"label\":\"Display layout\",\"type\":\"choice\",\"choices\":[{\"label\":\"inline-view\",\"value\":\"inline-view\"},{\"label\":\"stylized-view\",\"value\":\"stylized-view\"}]},{\"hint\":\"Digite uma breve descrição\",\"name\":\"label\",\"section\":\"Presentation\",\"label\":\"Label\",\"type\":\"string\"},{\"name\":\"event\",\"section\":\"Behavior\",\"label\":\"Event\",\"type\":\"string\"},{\"name\":\"css_class\",\"section\":\"other\",\"label\":\"CSS Class\",\"type\":\"string\"},{\"name\":\"image_url\",\"section\":\"other\",\"label\":\"Image Url\",\"type\":\"string\"},{\"name\":\"group_selected\",\"section\":\"other\",\"label\":\"Group selected\",\"type\":\"string\"}]",
+            "value": "[{\"name\":\"welcome_word\",\"section\":\"Presentation\",\"default_value\":\"Olá\",\"label\":\"Welcome Word\",\"type\":\"string\"},{\"name\":\"url_first_button\",\"section\":\"other\",\"label\":\"URl First Button\",\"type\":\"string\"},{\"name\":\"url_second_button\",\"section\":\"other\",\"label\":\"URL Second Button\",\"type\":\"string\"}]",
             "max_length": 8000,
             "ed": {
                 "name": "option_schema"
@@ -165,13 +165,13 @@
             "sys_readonly": false,
             "type": "script",
             "mandatory": false,
-            "displayValue": "(function() {\n\t/* populate the 'data' object */\n\t/* e.g., data.table = $sp.getValue('table'); */\n\tdata.label = input.label || options.label;\n\tdata.label = gs.getMessage(data.label).toUpperCase();\n\tdata.image = options.image_url;\n\tdata.count = 0;\n\t\n\tdata.groupSelected = options.group_selected;\n\n\tdata.table = input.table || options.table;\n\tdata.sp_page = input.sp_page || options.sp_page || '';\n\n\tdata.loggedUser = gs.getUserID().toString();\n\tdata.filter = 'request.opened_by='+data.loggedUser+'^'+options.filter;\n\t\n\tdata.count = getRecordCount(data.table, data.filter);\n\n\tfunction getRecordCount(table, filter){\n\t\tvar ga = new GlideAggregate(table);\n\t\tga.addAggregate('COUNT');\n\t\tga.addEncodedQuery(filter);\n\t\tga.query();\n\t\tif(ga.next())\n\t\t\treturn  ga.getAggregate('COUNT');\t\n\t}\n\n\n})();",
+            "displayValue": "(function() {\n  /* populate the 'data' object */\n  /* e.g., data.table = $sp.getValue('table'); */\n\t\n\tdata.welcome = gs.getMessage(options.welcome_word);\n\tdata.username = gs.getUser().getDisplayName().split(' ')[0];\n\tdata.phrase = options.phrase;\n\n\tdata.urlFirstButton = options.url_first_button;\n\tdata.urlSecondButton = options.url_second_button;\n\n})();",
             "readonly": false,
             "hint": "",
             "name": "script",
             "attributes": {},
             "choice": 0,
-            "value": "(function() {\n\t/* populate the 'data' object */\n\t/* e.g., data.table = $sp.getValue('table'); */\n\tdata.label = input.label || options.label;\n\tdata.label = gs.getMessage(data.label).toUpperCase();\n\tdata.image = options.image_url;\n\tdata.count = 0;\n\t\n\tdata.groupSelected = options.group_selected;\n\n\tdata.table = input.table || options.table;\n\tdata.sp_page = input.sp_page || options.sp_page || '';\n\n\tdata.loggedUser = gs.getUserID().toString();\n\tdata.filter = 'request.opened_by='+data.loggedUser+'^'+options.filter;\n\t\n\tdata.count = getRecordCount(data.table, data.filter);\n\n\tfunction getRecordCount(table, filter){\n\t\tvar ga = new GlideAggregate(table);\n\t\tga.addAggregate('COUNT');\n\t\tga.addEncodedQuery(filter);\n\t\tga.query();\n\t\tif(ga.next())\n\t\t\treturn  ga.getAggregate('COUNT');\t\n\t}\n\n\n})();",
+            "value": "(function() {\n  /* populate the 'data' object */\n  /* e.g., data.table = $sp.getValue('table'); */\n\t\n\tdata.welcome = gs.getMessage(options.welcome_word);\n\tdata.username = gs.getUser().getDisplayName().split(' ')[0];\n\tdata.phrase = options.phrase;\n\n\tdata.urlFirstButton = options.url_first_button;\n\tdata.urlSecondButton = options.url_second_button;\n\n})();",
             "max_length": 65000,
             "ed": {
                 "name": "script"
@@ -260,7 +260,7 @@
             "sys_readonly": false,
             "type": "script",
             "mandatory": false,
-            "displayValue": "function($location, $rootScope) {\n\t/* widget controller */\n\tvar c = this;\n\n\n\tc.redirectPage = function(page){\n\t\t$location.url(\"?id=\" + page + \"&group_selected=\" + c.data.groupSelected);\n\t};\n\n\t$rootScope.$on('select.sprint', function(evt, data){\n\t\tc.data.sprint =  data;\n\t\tc.server.update();\n\t});\n\n\t$rootScope.$on('select.company', function(evt, data){\n\t\tc.data.account = data;\n\t\tc.server.update();\n\t});\n\n\tconsole.log(c.data.loggedUser);\n\n\n}",
+            "displayValue": "api.controller=function() {\r  /* widget controller */\r  var c = this;\r};",
             "readonly": false,
             "hint": "",
             "name": "client_script",
@@ -268,7 +268,7 @@
                 "client_script": "true"
             },
             "choice": 0,
-            "value": "function($location, $rootScope) {\n\t/* widget controller */\n\tvar c = this;\n\n\n\tc.redirectPage = function(page){\n\t\t$location.url(\"?id=\" + page + \"&group_selected=\" + c.data.groupSelected);\n\t};\n\n\t$rootScope.$on('select.sprint', function(evt, data){\n\t\tc.data.sprint =  data;\n\t\tc.server.update();\n\t});\n\n\t$rootScope.$on('select.company', function(evt, data){\n\t\tc.data.account = data;\n\t\tc.server.update();\n\t});\n\n\tconsole.log(c.data.loggedUser);\n\n\n}",
+            "value": "api.controller=function() {\r  /* widget controller */\r  var c = this;\r};",
             "max_length": 8000,
             "ed": {
                 "name": "client_script"
@@ -283,7 +283,7 @@
             "sys_readonly": false,
             "type": "table_name",
             "mandatory": true,
-            "displayValue": "sp_instance_table",
+            "displayValue": "sp_instance",
             "readonly": false,
             "hint": "",
             "name": "data_table",
@@ -293,7 +293,7 @@
             },
             "choice": 0,
             "choices": [],
-            "value": "sp_instance_table",
+            "value": "sp_instance",
             "max_length": 80,
             "ed": {
                 "name": "data_table"
@@ -307,13 +307,13 @@
             "sys_readonly": false,
             "type": "translated_field",
             "mandatory": true,
-            "displayValue": "DGS: Indicator Count Onboarding",
+            "displayValue": "DGS: Onboarding Homepage Title",
             "readonly": false,
             "hint": "",
             "name": "name",
             "attributes": {},
             "choice": 0,
-            "value": "DGS: Indicator Count Onboarding",
+            "value": "DGS: Onboarding Homepage Title",
             "max_length": 40,
             "ed": {
                 "name": "name"
@@ -362,7 +362,7 @@
             "sys_readonly": false,
             "type": "string",
             "mandatory": false,
-            "displayValue": "dgs__indicator_count_onboarding",
+            "displayValue": "dgs__onboarding_homepage_title",
             "readonly": false,
             "hint": "Identifier for $sp.embedWidget()",
             "name": "id",
@@ -370,7 +370,7 @@
                 "edge_encryption_enabled": "true"
             },
             "choice": 0,
-            "value": "dgs__indicator_count_onboarding",
+            "value": "dgs__onboarding_homepage_title",
             "max_length": 40,
             "ed": {
                 "name": "id"
@@ -385,7 +385,7 @@
             "sys_readonly": false,
             "type": "field_list",
             "mandatory": false,
-            "displayValue": "table,filter,sp_page",
+            "displayValue": "",
             "readonly": false,
             "hint": "",
             "name": "field_list",
@@ -393,10 +393,10 @@
                 "is_multi_text": "false"
             },
             "choice": 0,
-            "value": "table,filter,sp_page",
+            "value": "",
             "max_length": 1000,
             "ed": {
-                "dependent_value": "sp_instance_table",
+                "dependent_value": "sp_instance",
                 "name": "field_list"
             }
         },
