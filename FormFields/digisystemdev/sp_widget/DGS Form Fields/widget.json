@@ -1,0 +1,426 @@
+{
+    "instance": {
+        "name": "digisystemdev",
+        "url": "https://digisystemdev.service-now.com",
+        "g_ck": "a3c1693e1b9a8150f087a79fe54bcbe6193e10b964b8386bfaf3390911dd2266bea8ace6"
+    },
+    "action": "saveWidget",
+    "tableName": "sp_widget",
+    "name": "DGS: Form Fields",
+    "sys_id": "21a504d51b964910f087a79fe54bcb98",
+    "widget": {
+        "template": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": -1,
+            "label": "Body HTML template",
+            "sys_readonly": false,
+            "type": "html_template",
+            "mandatory": false,
+            "displayValue": "<section ng-if=\"data.canRead\">\n  \n  <div class=\"field-list\" ng-if=\"c.data.fields.length > 0\">\n    <div class=\"field-item\" ng-repeat=\"field in c.data.fields\">\n      <label>{{field.label}}</label>\n      <p>{{field.display_value}}</p>\n    </div>\n  </div>\n \n  <div ng-if=\"c.data.variables.length > 0\" class=\"variable-section\" ng-repeat=\"var_set in c.data.variables_sets\">\n    \n    <h4 class=\"title\">\n      {{var_set.name}}\n    </h4>\n    \n    <div class=\"variable-summarizer\">\n      <div class=\"variable\" ng-repeat=\"variable in var_set.fields\" ng-if=\"variable.visible\">\n        <div class=\"group\">\n          <label>{{variable.label}}</label><br>\n          <span ng-bind-html=\"variable.displayValue\" />\n        </div>\n      </div>\n    </div>\n  </div>\n\n</section>\n\n\n",
+            "readonly": false,
+            "hint": "",
+            "name": "template",
+            "attributes": {},
+            "choice": 0,
+            "value": "<section ng-if=\"data.canRead\">\n  \n  <div class=\"field-list\" ng-if=\"c.data.fields.length > 0\">\n    <div class=\"field-item\" ng-repeat=\"field in c.data.fields\">\n      <label>{{field.label}}</label>\n      <p>{{field.display_value}}</p>\n    </div>\n  </div>\n \n  <div ng-if=\"c.data.variables.length > 0\" class=\"variable-section\" ng-repeat=\"var_set in c.data.variables_sets\">\n    \n    <h4 class=\"title\">\n      {{var_set.name}}\n    </h4>\n    \n    <div class=\"variable-summarizer\">\n      <div class=\"variable\" ng-repeat=\"variable in var_set.fields\" ng-if=\"variable.visible\">\n        <div class=\"group\">\n          <label>{{variable.label}}</label><br>\n          <span ng-bind-html=\"variable.displayValue\" />\n        </div>\n      </div>\n    </div>\n  </div>\n\n</section>\n\n\n",
+            "max_length": 65000,
+            "ed": {
+                "name": "template"
+            }
+        },
+        "css": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": -1,
+            "label": "CSS",
+            "sys_readonly": false,
+            "type": "css",
+            "mandatory": false,
+            "displayValue": "section{\n  .field-list{\n    display: flex;\n    flex-wrap: wrap;\n    padding-bottom: 12px;\n\n    .field-item{\n      padding: 0 16px;\n      label{\n        font-weight: 600;\n      }\n    }\n  }\n\n  .variable-section{\n    border: 1px solid #E2E2E2;\n    margin-bottom: 16px;\n    border-radius: 12px;\n    padding: 12px 16px;\n\n    .title{\n      padding: 8px 16px 16px;\n      margin: 0;\n      color: $brand-primary;\n    }\n\n    .variable-summarizer{\n      display: grid;\n      grid-template-columns: repeat(3, 1fr);\n      column-gap: 16px;\n      row-gap: 16px;\n      .variable{\n        .group{\n          padding: 8px 16px;\n          //border: 1px solid #E2E2E2;\n          border-radius: 12px;\n          label{\n            font-weight: 600;\n          }\n        }\n\n      }\n    }\n  }\n}\n\n@media screen and (max-width: 767px){\n  section{\n    .variable-section{\n      .variable-summarizer{\n        grid-template-columns: 1fr;\n      }\n    }\n  }\n}",
+            "readonly": false,
+            "hint": "",
+            "name": "css",
+            "attributes": {},
+            "choice": 0,
+            "value": "section{\n  .field-list{\n    display: flex;\n    flex-wrap: wrap;\n    padding-bottom: 12px;\n\n    .field-item{\n      padding: 0 16px;\n      label{\n        font-weight: 600;\n      }\n    }\n  }\n\n  .variable-section{\n    border: 1px solid #E2E2E2;\n    margin-bottom: 16px;\n    border-radius: 12px;\n    padding: 12px 16px;\n\n    .title{\n      padding: 8px 16px 16px;\n      margin: 0;\n      color: $brand-primary;\n    }\n\n    .variable-summarizer{\n      display: grid;\n      grid-template-columns: repeat(3, 1fr);\n      column-gap: 16px;\n      row-gap: 16px;\n      .variable{\n        .group{\n          padding: 8px 16px;\n          //border: 1px solid #E2E2E2;\n          border-radius: 12px;\n          label{\n            font-weight: 600;\n          }\n        }\n\n      }\n    }\n  }\n}\n\n@media screen and (max-width: 767px){\n  section{\n    .variable-section{\n      .variable-summarizer{\n        grid-template-columns: 1fr;\n      }\n    }\n  }\n}",
+            "max_length": 8000,
+            "ed": {
+                "name": "css"
+            }
+        },
+        "roles": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": 12,
+            "label": "Roles",
+            "sys_readonly": false,
+            "type": "user_roles",
+            "mandatory": false,
+            "displayValue": "",
+            "readonly": false,
+            "hint": "",
+            "name": "roles",
+            "attributes": {
+                "no_truncate": "true",
+                "update_exempt": "true",
+                "record_watcher_blacklist": "true"
+            },
+            "choice": 0,
+            "value": "",
+            "max_length": 255,
+            "ed": {
+                "name": "roles"
+            }
+        },
+        "link": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": -1,
+            "label": "Link",
+            "sys_readonly": false,
+            "type": "script",
+            "mandatory": false,
+            "displayValue": "function link(scope, element, attrs, controller) {\r\n  \r\n}",
+            "readonly": false,
+            "hint": "",
+            "name": "link",
+            "attributes": {
+                "client_script": "true"
+            },
+            "choice": 0,
+            "value": "function link(scope, element, attrs, controller) {\r\n  \r\n}",
+            "max_length": 65000,
+            "ed": {
+                "name": "link"
+            }
+        },
+        "description": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": -1,
+            "label": "Description",
+            "sys_readonly": false,
+            "type": "string",
+            "mandatory": false,
+            "displayValue": "",
+            "readonly": false,
+            "hint": "Defines what the widget does",
+            "name": "description",
+            "attributes": {
+                "edge_encryption_enabled": "true"
+            },
+            "choice": 0,
+            "value": "",
+            "max_length": 300,
+            "ed": {
+                "name": "description"
+            }
+        },
+        "demo_data": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": -1,
+            "label": "Demo data",
+            "sys_readonly": false,
+            "type": "json",
+            "mandatory": false,
+            "displayValue": "",
+            "readonly": false,
+            "hint": "",
+            "name": "demo_data",
+            "attributes": {},
+            "choice": 0,
+            "value": "",
+            "max_length": 8000,
+            "ed": {
+                "name": "demo_data"
+            }
+        },
+        "option_schema": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": -1,
+            "label": "Option schema",
+            "sys_readonly": false,
+            "type": "json",
+            "mandatory": false,
+            "displayValue": "",
+            "readonly": false,
+            "hint": "",
+            "name": "option_schema",
+            "attributes": {},
+            "choice": 0,
+            "value": "",
+            "max_length": 8000,
+            "ed": {
+                "name": "option_schema"
+            }
+        },
+        "script": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": -1,
+            "label": "Server script",
+            "sys_readonly": false,
+            "type": "script",
+            "mandatory": false,
+            "displayValue": "(function() {\n\t/* populate the 'data' object */\n\t/* e.g., data.table = $sp.getValue('table'); */\n\tdata.table = input.table || $sp.getParameter('table') || options.table;\n\tdata.record = input.record || $sp.getParameter('sys_id');\n\tdata.field_list = options.field_list;\n\tdata.current_user = gs.getUserID();\n\n\tif(!data.record)\n\t\treturn;\n\n\tvar gr = $sp.getRecord(data.table, data.record);\n\tdata.fields = $sp.getFields(gr, data.field_list);\n\n\tvar record = sn_std_tkt_api.TicketConfig.getTicketRecord(data.table, data.record);\n\tif (record == null)\n\t\treturn;\n\n\tdata.canRead = record.canRead();\n\tif (!data.canRead)\n\t\treturn;\n\n\t//data.variables = new GlobalServiceCatalogUtil().getVariablesForTask(record, true);\n\tvar form = $sp.getForm(data.table, data.record);\n\tdata.variables = form.variables;\n\t\n\t\n\tif(data.variables)\n\t\tdata.variables_sets = new OnboardingPortalUtils().getVariablesInSections(gr.getValue('cat_item'), data.variables);\n\t\n})();\n",
+            "readonly": false,
+            "hint": "",
+            "name": "script",
+            "attributes": {},
+            "choice": 0,
+            "value": "(function() {\n\t/* populate the 'data' object */\n\t/* e.g., data.table = $sp.getValue('table'); */\n\tdata.table = input.table || $sp.getParameter('table') || options.table;\n\tdata.record = input.record || $sp.getParameter('sys_id');\n\tdata.field_list = options.field_list;\n\tdata.current_user = gs.getUserID();\n\n\tif(!data.record)\n\t\treturn;\n\n\tvar gr = $sp.getRecord(data.table, data.record);\n\tdata.fields = $sp.getFields(gr, data.field_list);\n\n\tvar record = sn_std_tkt_api.TicketConfig.getTicketRecord(data.table, data.record);\n\tif (record == null)\n\t\treturn;\n\n\tdata.canRead = record.canRead();\n\tif (!data.canRead)\n\t\treturn;\n\n\t//data.variables = new GlobalServiceCatalogUtil().getVariablesForTask(record, true);\n\tvar form = $sp.getForm(data.table, data.record);\n\tdata.variables = form.variables;\n\t\n\t\n\tif(data.variables)\n\t\tdata.variables_sets = new OnboardingPortalUtils().getVariablesInSections(gr.getValue('cat_item'), data.variables);\n\t\n})();\n",
+            "max_length": 65000,
+            "ed": {
+                "name": "script"
+            }
+        },
+        "has_preview": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": -7,
+            "label": "Has preview",
+            "sys_readonly": false,
+            "type": "boolean",
+            "mandatory": false,
+            "displayValue": "false",
+            "readonly": false,
+            "hint": "Defines whether preview data is available",
+            "name": "has_preview",
+            "attributes": {},
+            "choice": 0,
+            "value": "false",
+            "max_length": 40,
+            "ed": {
+                "name": "has_preview"
+            }
+        },
+        "public": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": -7,
+            "label": "Public",
+            "sys_readonly": false,
+            "type": "boolean",
+            "mandatory": false,
+            "displayValue": "false",
+            "readonly": false,
+            "hint": "Widget publicly available to unauthenticated users",
+            "name": "public",
+            "attributes": {
+                "update_exempt": "true"
+            },
+            "choice": 0,
+            "value": "false",
+            "max_length": 40,
+            "ed": {
+                "name": "public"
+            }
+        },
+        "docs": {
+            "sys_mandatory": false,
+            "visible": true,
+            "table_attributes": {
+                "update_synch": "true",
+                "synch_attachments": "true"
+            },
+            "dbType": 12,
+            "label": "Docs",
+            "sys_readonly": false,
+            "type": "reference",
+            "mandatory": false,
+            "refTable": "sp_documentation",
+            "reference_type": "table",
+            "displayValue": "",
+            "readonly": false,
+            "hint": "",
+            "name": "docs",
+            "attributes": {
+                "encode_utf8": "false"
+            },
+            "reference_key": "sys_id",
+            "readonlyClickthrough": false,
+            "choice": 0,
+            "value": "",
+            "max_length": 32,
+            "ed": {
+                "reference": "sp_documentation",
+                "searchField": "title",
+                "defaultOperator": "STARTSWITH",
+                "name": "docs"
+            }
+        },
+        "client_script": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": -1,
+            "label": "Client controller",
+            "sys_readonly": false,
+            "type": "script",
+            "mandatory": false,
+            "displayValue": "api.controller=function($rootScope, $scope, spUtil) {\n  /* widget controller */\n  var c = this;\n\t\n\tspUtil.recordWatch($scope, c.data.table, \"requested_for=\" + c.data.current_user, function(name) {\n\t\tc.server.update();\n\t});\n\t\n\t$rootScope.$on('selected.record', function(evt, data){\n\t\tc.data.table = data.table;\n\t\tc.data.record = data.sys_id;\n\t\tc.server.update();\n\t});\n\t\n\t\n};",
+            "readonly": false,
+            "hint": "",
+            "name": "client_script",
+            "attributes": {
+                "client_script": "true"
+            },
+            "choice": 0,
+            "value": "api.controller=function($rootScope, $scope, spUtil) {\n  /* widget controller */\n  var c = this;\n\t\n\tspUtil.recordWatch($scope, c.data.table, \"requested_for=\" + c.data.current_user, function(name) {\n\t\tc.server.update();\n\t});\n\t\n\t$rootScope.$on('selected.record', function(evt, data){\n\t\tc.data.table = data.table;\n\t\tc.data.record = data.sys_id;\n\t\tc.server.update();\n\t});\n\t\n\t\n};",
+            "max_length": 8000,
+            "ed": {
+                "name": "client_script"
+            }
+        },
+        "data_table": {
+            "sys_mandatory": true,
+            "visible": true,
+            "dbType": 12,
+            "default_value": "sp_instance",
+            "label": "Data table",
+            "sys_readonly": false,
+            "type": "table_name",
+            "mandatory": true,
+            "displayValue": "sp_instance_table",
+            "readonly": false,
+            "hint": "",
+            "name": "data_table",
+            "attributes": {
+                "base_table": "sp_instance",
+                "base_start": "true"
+            },
+            "choice": 0,
+            "choices": [],
+            "value": "sp_instance_table",
+            "max_length": 80,
+            "ed": {
+                "name": "data_table"
+            }
+        },
+        "name": {
+            "sys_mandatory": true,
+            "visible": true,
+            "dbType": 12,
+            "label": "Name",
+            "sys_readonly": false,
+            "type": "translated_field",
+            "mandatory": true,
+            "displayValue": "DGS: Form Fields",
+            "readonly": false,
+            "hint": "",
+            "name": "name",
+            "attributes": {},
+            "choice": 0,
+            "value": "DGS: Form Fields",
+            "max_length": 40,
+            "ed": {
+                "name": "name"
+            }
+        },
+        "sys_scope": {
+            "sys_mandatory": false,
+            "visible": true,
+            "table_attributes": {
+                "metadata_link_exempt": "true"
+            },
+            "dbType": 12,
+            "label": "Application",
+            "sys_readonly": true,
+            "type": "reference",
+            "mandatory": false,
+            "refTable": "sys_scope",
+            "reference_type": "table",
+            "displayValue": "Global",
+            "readonly": true,
+            "hint": "Application containing this record",
+            "name": "sys_scope",
+            "attributes": {
+                "encode_utf8": "false",
+                "list_force_default": "true",
+                "readonly_clickthrough": "true",
+                "ignore_filter_on_new": "true"
+            },
+            "reference_key": "sys_id",
+            "readonlyClickthrough": true,
+            "choice": 0,
+            "value": "global",
+            "max_length": 32,
+            "ed": {
+                "reference": "sys_scope",
+                "searchField": "name",
+                "defaultOperator": "STARTSWITH",
+                "name": "sys_scope"
+            }
+        },
+        "id": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": 12,
+            "label": "ID",
+            "sys_readonly": false,
+            "type": "string",
+            "mandatory": false,
+            "displayValue": "",
+            "readonly": false,
+            "hint": "Identifier for $sp.embedWidget()",
+            "name": "id",
+            "attributes": {
+                "edge_encryption_enabled": "true"
+            },
+            "choice": 0,
+            "value": "",
+            "max_length": 40,
+            "ed": {
+                "name": "id"
+            }
+        },
+        "field_list": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dependentField": "data_table",
+            "dbType": -1,
+            "label": "Fields",
+            "sys_readonly": false,
+            "type": "field_list",
+            "mandatory": false,
+            "displayValue": "table,field_list",
+            "readonly": false,
+            "hint": "",
+            "name": "field_list",
+            "attributes": {
+                "is_multi_text": "false"
+            },
+            "choice": 0,
+            "value": "table,field_list",
+            "max_length": 1000,
+            "ed": {
+                "dependent_value": "sp_instance_table",
+                "name": "field_list"
+            }
+        },
+        "controller_as": {
+            "sys_mandatory": false,
+            "visible": true,
+            "dbType": 12,
+            "label": "controllerAs",
+            "sys_readonly": false,
+            "type": "string",
+            "mandatory": false,
+            "displayValue": "c",
+            "readonly": false,
+            "hint": "Identifier name for a reference to the controller in the directive's scope",
+            "name": "controller_as",
+            "attributes": {
+                "edge_encryption_enabled": "true"
+            },
+            "choice": 0,
+            "value": "c",
+            "max_length": 100,
+            "ed": {
+                "name": "controller_as"
+            }
+        }
+    }
+}
