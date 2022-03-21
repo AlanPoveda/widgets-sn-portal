@@ -1,0 +1,1 @@
+[{"name":"display_fields","section":"Presentation","label":"Display Fields","type":"field_list"},{"name":"filter","section":"Data","label":"Filter","type":"string"},{"name":"enable_states_filter","section":"Data","label":"Enable States filter","type":"string"},{"name":"field_filter","section":"Data","label":"Field Filter","type":"field_name"}]
