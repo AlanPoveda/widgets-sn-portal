@@ -1,2 +1,3 @@
-autocomplete
-jsconfig.json
+autocomplete/
+.DS_Store
+*.json

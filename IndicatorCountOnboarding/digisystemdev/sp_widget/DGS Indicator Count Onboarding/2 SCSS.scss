@@ -28,7 +28,7 @@
 
             font-weight: 100;
             font-size: 13px;
-            //max-width: 100px;
+         
         }
 
         .number-indicator {
@@ -65,7 +65,7 @@
             color: $action-primary-color;
 
             &:hover {
-                background: #67cfee;
+                background: $btn-hover-color;
             }
             .arrow-image {
                 position: absolute;

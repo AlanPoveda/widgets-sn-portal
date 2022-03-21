@@ -1,4 +1,4 @@
-function($location, $rootScope) {
+function($scope, $location, $rootScope, spUtil) {
 	/* widget controller */
 	var c = this;
 
@@ -17,7 +17,10 @@ function($location, $rootScope) {
 		c.server.update();
 	});
 
-	console.log(c.data.loggedUser);
 
-
+	//How works in documentation
+	spUtil.recordWatch($scope, c.data.table , c.data.filter, function(response) {
+		c.server.refresh();
+	});
 }
+
