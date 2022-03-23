@@ -1,0 +1,25 @@
+<div class="flow" ng-if="data.canRead && data.flow.length > 0">
+  <ul class="steps">
+    <li ng-repeat="key in data.flow" class="steps__item" ng-class="{'grey_line': key.colour != 'success', 'pink_line': key.colour == 'success'}">
+      <i 
+         ng-if="key.colour == 'success'" 
+         class="icon-check previousStep icons"
+         aria-hidden="true">
+      </i>
+      <i 
+         ng-if="key.colour == 'warning'" 
+         class="icon-check actualStep icons"
+         aria-hidden="true">
+      </i>
+      <i 
+         class="nextStep icons"
+         ng-if="key.colour != 'success' && key.colour != 'warning'"
+         aria-hidden="true">
+        <span>{{key.number}}</span>
+      </i>
+      <p ng-class="{'active': key.colour == 'success' || key.colour == 'warning'}">
+        {{key.name}}
+      </p>        
+    </li>
+  </ul>
+</div>
