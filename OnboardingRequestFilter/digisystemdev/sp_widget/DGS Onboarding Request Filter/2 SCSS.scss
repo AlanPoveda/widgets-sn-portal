@@ -39,8 +39,9 @@
       .request-list{
         .request-item{
           display: grid;
-          padding: 8px 12px;
-          grid-template-columns: 2fr 1fr;
+          padding: 15px 12px;
+          border-top: 1px solid #8b8b8b;
+          grid-template-columns: 1fr;
           .display_value{
             color: #000000;
             &:last-child{
