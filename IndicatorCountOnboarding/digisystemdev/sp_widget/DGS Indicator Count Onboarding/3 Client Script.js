@@ -22,5 +22,6 @@ function($scope, $location, $rootScope, spUtil) {
 	spUtil.recordWatch($scope, c.data.table , c.data.filter, function(response) {
 		c.server.refresh();
 	});
+	
 }
 

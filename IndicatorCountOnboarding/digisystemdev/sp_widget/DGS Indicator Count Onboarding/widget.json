@@ -2,7 +2,7 @@
     "instance": {
         "name": "digisystemdev",
         "url": "https://digisystemdev.service-now.com",
-        "g_ck": "a3c1693e1b9a8150f087a79fe54bcbe6193e10b964b8386bfaf3390911dd2266bea8ace6"
+        "g_ck": "f2884d7f1bd2495056252fc13b4bcb6986b45392c141f45b9e802bf39730113152484f0a"
     },
     "action": "saveWidget",
     "tableName": "sp_widget",
@@ -17,13 +17,13 @@
             "sys_readonly": false,
             "type": "html_template",
             "mandatory": false,
-            "displayValue": "<div class=\"container-icon {{options.css_class}}\">\n    <img src=\"{{data.image}}\" />\n    <div class=\"indicator\">\n        <span class=\"label-indicator\">{{data.label}}</span>\n\n        <span class=\"number-indicator\" ng-click=\"c.redirectPage(data.sp_page)\">\n            {{data.count}}\n        </span>\n    </div>\n\n    <button ng-click=\"c.redirectPage(data.sp_page)\">\n        <img src=\"arrow-right.png\" class=\"arrow-image\" />\n    </button>\n</div>\n",
+            "displayValue": "<div class=\"container-icon {{options.css_class}}\" ng-if=\"c.data.show\">\n    <img src=\"{{data.image}}\" />\n    <div class=\"indicator\">\n        <span class=\"label-indicator\">{{data.label}}</span>\n\n        <span class=\"number-indicator\" ng-click=\"c.redirectPage(data.sp_page)\">\n            {{data.count}}\n        </span>\n    </div>\n\n    <button ng-click=\"c.redirectPage(data.sp_page)\">\n        <img src=\"arrow-right.png\" class=\"arrow-image\" />\n    </button>\n</div>\n",
             "readonly": false,
             "hint": "",
             "name": "template",
             "attributes": {},
             "choice": 0,
-            "value": "<div class=\"container-icon {{options.css_class}}\">\n    <img src=\"{{data.image}}\" />\n    <div class=\"indicator\">\n        <span class=\"label-indicator\">{{data.label}}</span>\n\n        <span class=\"number-indicator\" ng-click=\"c.redirectPage(data.sp_page)\">\n            {{data.count}}\n        </span>\n    </div>\n\n    <button ng-click=\"c.redirectPage(data.sp_page)\">\n        <img src=\"arrow-right.png\" class=\"arrow-image\" />\n    </button>\n</div>\n",
+            "value": "<div class=\"container-icon {{options.css_class}}\" ng-if=\"c.data.show\">\n    <img src=\"{{data.image}}\" />\n    <div class=\"indicator\">\n        <span class=\"label-indicator\">{{data.label}}</span>\n\n        <span class=\"number-indicator\" ng-click=\"c.redirectPage(data.sp_page)\">\n            {{data.count}}\n        </span>\n    </div>\n\n    <button ng-click=\"c.redirectPage(data.sp_page)\">\n        <img src=\"arrow-right.png\" class=\"arrow-image\" />\n    </button>\n</div>\n",
             "max_length": 65000,
             "ed": {
                 "name": "template"
@@ -145,13 +145,13 @@
             "sys_readonly": false,
             "type": "json",
             "mandatory": false,
-            "displayValue": "[{\"hint\":\"Escolha a opção de visualização\",\"name\":\"display_layout\",\"section\":\"Presentation\",\"default_value\":\"inline-view\",\"label\":\"Display layout\",\"type\":\"choice\",\"choices\":[{\"label\":\"inline-view\",\"value\":\"inline-view\"},{\"label\":\"stylized-view\",\"value\":\"stylized-view\"}]},{\"hint\":\"Digite uma breve descrição\",\"name\":\"label\",\"section\":\"Presentation\",\"label\":\"Label\",\"type\":\"string\"},{\"name\":\"event\",\"section\":\"Behavior\",\"label\":\"Event\",\"type\":\"string\"},{\"name\":\"css_class\",\"section\":\"other\",\"label\":\"CSS Class\",\"type\":\"string\"},{\"name\":\"image_url\",\"section\":\"other\",\"label\":\"Image Url\",\"type\":\"string\"},{\"name\":\"group_selected\",\"section\":\"other\",\"label\":\"Group selected\",\"type\":\"string\"}]",
+            "displayValue": "[{\"hint\":\"Escolha a opção de visualização\",\"name\":\"display_layout\",\"section\":\"Presentation\",\"default_value\":\"inline-view\",\"label\":\"Display layout\",\"type\":\"choice\",\"choices\":[{\"label\":\"inline-view\",\"value\":\"inline-view\"},{\"label\":\"stylized-view\",\"value\":\"stylized-view\"}]},{\"hint\":\"Digite uma breve descrição\",\"name\":\"label\",\"section\":\"Presentation\",\"label\":\"Label\",\"type\":\"string\"},{\"name\":\"event\",\"section\":\"Behavior\",\"label\":\"Event\",\"type\":\"string\"},{\"name\":\"css_class\",\"section\":\"other\",\"label\":\"CSS Class\",\"type\":\"string\"},{\"name\":\"image_url\",\"section\":\"other\",\"label\":\"Image Url\",\"type\":\"string\"},{\"name\":\"group_selected\",\"section\":\"other\",\"label\":\"Group selected\",\"type\":\"string\"},{\"name\":\"restrict_groups\",\"section\":\"Data\",\"label\":\"Restrict Groups\",\"type\":\"string\"}]",
             "readonly": false,
             "hint": "",
             "name": "option_schema",
             "attributes": {},
             "choice": 0,
-            "value": "[{\"hint\":\"Escolha a opção de visualização\",\"name\":\"display_layout\",\"section\":\"Presentation\",\"default_value\":\"inline-view\",\"label\":\"Display layout\",\"type\":\"choice\",\"choices\":[{\"label\":\"inline-view\",\"value\":\"inline-view\"},{\"label\":\"stylized-view\",\"value\":\"stylized-view\"}]},{\"hint\":\"Digite uma breve descrição\",\"name\":\"label\",\"section\":\"Presentation\",\"label\":\"Label\",\"type\":\"string\"},{\"name\":\"event\",\"section\":\"Behavior\",\"label\":\"Event\",\"type\":\"string\"},{\"name\":\"css_class\",\"section\":\"other\",\"label\":\"CSS Class\",\"type\":\"string\"},{\"name\":\"image_url\",\"section\":\"other\",\"label\":\"Image Url\",\"type\":\"string\"},{\"name\":\"group_selected\",\"section\":\"other\",\"label\":\"Group selected\",\"type\":\"string\"}]",
+            "value": "[{\"hint\":\"Escolha a opção de visualização\",\"name\":\"display_layout\",\"section\":\"Presentation\",\"default_value\":\"inline-view\",\"label\":\"Display layout\",\"type\":\"choice\",\"choices\":[{\"label\":\"inline-view\",\"value\":\"inline-view\"},{\"label\":\"stylized-view\",\"value\":\"stylized-view\"}]},{\"hint\":\"Digite uma breve descrição\",\"name\":\"label\",\"section\":\"Presentation\",\"label\":\"Label\",\"type\":\"string\"},{\"name\":\"event\",\"section\":\"Behavior\",\"label\":\"Event\",\"type\":\"string\"},{\"name\":\"css_class\",\"section\":\"other\",\"label\":\"CSS Class\",\"type\":\"string\"},{\"name\":\"image_url\",\"section\":\"other\",\"label\":\"Image Url\",\"type\":\"string\"},{\"name\":\"group_selected\",\"section\":\"other\",\"label\":\"Group selected\",\"type\":\"string\"},{\"name\":\"restrict_groups\",\"section\":\"Data\",\"label\":\"Restrict Groups\",\"type\":\"string\"}]",
             "max_length": 8000,
             "ed": {
                 "name": "option_schema"
@@ -165,13 +165,13 @@
             "sys_readonly": false,
             "type": "script",
             "mandatory": false,
-            "displayValue": "(function() {\n\t/* populate the 'data' object */\n\t/* e.g., data.table = $sp.getValue('table'); */\n\tdata.label = input.label || options.label;\n\tdata.label = gs.getMessage(data.label).toUpperCase();\n\tdata.image = options.image_url;\n\tdata.count = 0;\n\t\n\tdata.groupSelected = options.group_selected;\n\n\tdata.table = input.table || options.table;\n\tdata.sp_page = input.sp_page || options.sp_page || '';\n\n\tdata.loggedUser = gs.getUserID().toString();\n\tdata.filter = 'request.opened_by='+data.loggedUser+'^'+options.filter;\n\t\n\tdata.count = getRecordCount(data.table, data.filter);\n\n\tfunction getRecordCount(table, filter){\n\t\tvar ga = new GlideAggregate(table);\n\t\tga.addAggregate('COUNT');\n\t\tga.addEncodedQuery(filter);\n\t\tga.query();\n\t\tif(ga.next())\n\t\t\treturn  ga.getAggregate('COUNT');\t\n\t}\n\n\n})();",
+            "displayValue": "(function() {\n\t/* populate the 'data' object */\n\t/* e.g., data.table = $sp.getValue('table'); */\n\tdata.restrict_groups = options.restrict_groups.split(',');\n\tdata.label = input.label || options.label;\n\tdata.label = gs.getMessage(data.label).toUpperCase();\n\tdata.image = options.image_url;\n\tdata.count = 0;\n\tdata.show = true;\n\t\t\n\tif(data.restrict_groups){\n\t\tdata.restrict_groups.forEach(function(item, index){\n\t\t\tvar isMember = gs.getUser().isMemberOf(item);\n\t\t\tif(isMember){\t\n\t\t\t\tdata.show = false;\n\t\t\t\treturn;\n\t\t\t}\t\n\t\t});\n\t}\n\t\n\tdata.groupSelected = options.group_selected;\n\n\tdata.table = input.table || options.table;\n\tdata.sp_page = input.sp_page || options.sp_page || '';\n\n\tdata.loggedUser = gs.getUserID().toString();\n\t\n\tdata.filter = 'request.opened_by='+data.loggedUser+'^'+options.filter;\n\t\n\tdata.count = getRecordCount(data.table, data.filter);\n\n\tfunction getRecordCount(table, filter){\n\t\tvar ga = new GlideAggregate(table);\n\t\tga.addAggregate('COUNT');\n\t\tga.addEncodedQuery(filter);\n\t\tga.query();\n\t\tif(ga.next())\n\t\t\treturn  ga.getAggregate('COUNT');\t\n\t}\n\n\n})();",
             "readonly": false,
             "hint": "",
             "name": "script",
             "attributes": {},
             "choice": 0,
-            "value": "(function() {\n\t/* populate the 'data' object */\n\t/* e.g., data.table = $sp.getValue('table'); */\n\tdata.label = input.label || options.label;\n\tdata.label = gs.getMessage(data.label).toUpperCase();\n\tdata.image = options.image_url;\n\tdata.count = 0;\n\t\n\tdata.groupSelected = options.group_selected;\n\n\tdata.table = input.table || options.table;\n\tdata.sp_page = input.sp_page || options.sp_page || '';\n\n\tdata.loggedUser = gs.getUserID().toString();\n\tdata.filter = 'request.opened_by='+data.loggedUser+'^'+options.filter;\n\t\n\tdata.count = getRecordCount(data.table, data.filter);\n\n\tfunction getRecordCount(table, filter){\n\t\tvar ga = new GlideAggregate(table);\n\t\tga.addAggregate('COUNT');\n\t\tga.addEncodedQuery(filter);\n\t\tga.query();\n\t\tif(ga.next())\n\t\t\treturn  ga.getAggregate('COUNT');\t\n\t}\n\n\n})();",
+            "value": "(function() {\n\t/* populate the 'data' object */\n\t/* e.g., data.table = $sp.getValue('table'); */\n\tdata.restrict_groups = options.restrict_groups.split(',');\n\tdata.label = input.label || options.label;\n\tdata.label = gs.getMessage(data.label).toUpperCase();\n\tdata.image = options.image_url;\n\tdata.count = 0;\n\tdata.show = true;\n\t\t\n\tif(data.restrict_groups){\n\t\tdata.restrict_groups.forEach(function(item, index){\n\t\t\tvar isMember = gs.getUser().isMemberOf(item);\n\t\t\tif(isMember){\t\n\t\t\t\tdata.show = false;\n\t\t\t\treturn;\n\t\t\t}\t\n\t\t});\n\t}\n\t\n\tdata.groupSelected = options.group_selected;\n\n\tdata.table = input.table || options.table;\n\tdata.sp_page = input.sp_page || options.sp_page || '';\n\n\tdata.loggedUser = gs.getUserID().toString();\n\t\n\tdata.filter = 'request.opened_by='+data.loggedUser+'^'+options.filter;\n\t\n\tdata.count = getRecordCount(data.table, data.filter);\n\n\tfunction getRecordCount(table, filter){\n\t\tvar ga = new GlideAggregate(table);\n\t\tga.addAggregate('COUNT');\n\t\tga.addEncodedQuery(filter);\n\t\tga.query();\n\t\tif(ga.next())\n\t\t\treturn  ga.getAggregate('COUNT');\t\n\t}\n\n\n})();",
             "max_length": 65000,
             "ed": {
                 "name": "script"
@@ -260,7 +260,7 @@
             "sys_readonly": false,
             "type": "script",
             "mandatory": false,
-            "displayValue": "function($scope, $location, $rootScope, spUtil) {\n\t/* widget controller */\n\tvar c = this;\n\n\n\tc.redirectPage = function(page){\n\t\t$location.url(\"?id=\" + page + \"&group_selected=\" + c.data.groupSelected);\n\t};\n\n\t$rootScope.$on('select.sprint', function(evt, data){\n\t\tc.data.sprint =  data;\n\t\tc.server.update();\n\t});\n\n\t$rootScope.$on('select.company', function(evt, data){\n\t\tc.data.account = data;\n\t\tc.server.update();\n\t});\n\n\n\t//How works in documentation\n\tspUtil.recordWatch($scope, c.data.table , c.data.filter, function(response) {\n\t\tconsole.log('Estou aqui');\n\t\tconsole.log(response); //Returns the data inserted or updated on the table\n\t});\n}\n\n",
+            "displayValue": "function($scope, $location, $rootScope, spUtil) {\n\t/* widget controller */\n\tvar c = this;\n\n\n\tc.redirectPage = function(page){\n\t\t$location.url(\"?id=\" + page + \"&group_selected=\" + c.data.groupSelected);\n\t};\n\n\t$rootScope.$on('select.sprint', function(evt, data){\n\t\tc.data.sprint =  data;\n\t\tc.server.update();\n\t});\n\n\t$rootScope.$on('select.company', function(evt, data){\n\t\tc.data.account = data;\n\t\tc.server.update();\n\t});\n\n\n\t//How works in documentation\n\tspUtil.recordWatch($scope, c.data.table , c.data.filter, function(response) {\n\t\tc.server.refresh();\n\t});\n\t\n}\n\n",
             "readonly": false,
             "hint": "",
             "name": "client_script",
@@ -268,7 +268,7 @@
                 "client_script": "true"
             },
             "choice": 0,
-            "value": "function($scope, $location, $rootScope, spUtil) {\n\t/* widget controller */\n\tvar c = this;\n\n\n\tc.redirectPage = function(page){\n\t\t$location.url(\"?id=\" + page + \"&group_selected=\" + c.data.groupSelected);\n\t};\n\n\t$rootScope.$on('select.sprint', function(evt, data){\n\t\tc.data.sprint =  data;\n\t\tc.server.update();\n\t});\n\n\t$rootScope.$on('select.company', function(evt, data){\n\t\tc.data.account = data;\n\t\tc.server.update();\n\t});\n\n\n\t//How works in documentation\n\tspUtil.recordWatch($scope, c.data.table , c.data.filter, function(response) {\n\t\tconsole.log('Estou aqui');\n\t\tconsole.log(response); //Returns the data inserted or updated on the table\n\t});\n}\n\n",
+            "value": "function($scope, $location, $rootScope, spUtil) {\n\t/* widget controller */\n\tvar c = this;\n\n\n\tc.redirectPage = function(page){\n\t\t$location.url(\"?id=\" + page + \"&group_selected=\" + c.data.groupSelected);\n\t};\n\n\t$rootScope.$on('select.sprint', function(evt, data){\n\t\tc.data.sprint =  data;\n\t\tc.server.update();\n\t});\n\n\t$rootScope.$on('select.company', function(evt, data){\n\t\tc.data.account = data;\n\t\tc.server.update();\n\t});\n\n\n\t//How works in documentation\n\tspUtil.recordWatch($scope, c.data.table , c.data.filter, function(response) {\n\t\tc.server.refresh();\n\t});\n\t\n}\n\n",
             "max_length": 8000,
             "ed": {
                 "name": "client_script"
