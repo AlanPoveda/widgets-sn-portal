@@ -2,7 +2,7 @@
     "instance": {
         "name": "digisystemdev",
         "url": "https://digisystemdev.service-now.com",
-        "g_ck": "f2884d7f1bd2495056252fc13b4bcb6986b45392c141f45b9e802bf39730113152484f0a"
+        "g_ck": "df399eec1be28110f087a79fe54bcbdb355d4aca8ce9d14ce444ebeb500a8c19d3f33207"
     },
     "action": "saveWidget",
     "tableName": "sp_widget",
@@ -337,7 +337,6 @@
             "hint": "Application containing this record",
             "name": "sys_scope",
             "attributes": {
-                "encode_utf8": "false",
                 "list_force_default": "true",
                 "readonly_clickthrough": "true",
                 "ignore_filter_on_new": "true"
