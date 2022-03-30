@@ -1,0 +1,67 @@
+<div class="content-list">
+  <h1>Sprints</h1>
+  <div class="accordion sprint" ng-repeat="sprint in data.sprints">
+    <div class="accordion-heading">
+      <div class="left">
+        
+        <h5 class="name">
+         <!-- <i class="open-accordion fa fa-caret-right" ng-click=""></i>-->
+          {{sprint.name}}
+        </h5>
+        <span class="dates">
+          {{sprint.start_date.split(' ')[0]}}
+        </span>
+        <span class="dates">
+          {{sprint.end_date.split(' ')[0]}}
+        </span>
+
+        <span>
+          {{sprint.state}}
+        </span>
+        <span>
+          {{sprint.storiesCount}}
+        </span>
+      </div>
+      <div class="right">
+        <span class="points">
+          {{sprint.points}}
+        </span> 
+        <button class="btn btn-primary" ng-if="sprint.state == c.options.planning_state" ng-click="validateSprint(sprint)">
+          ${Validate}
+        </button>
+      </div>
+
+    </div>
+    <div class="accordion-body" ng-class="{'expand': view[$index] == true}">
+      <table>
+        <tbody>
+          <!-- Columns Name -->
+          <tr>
+            <th ng-repeat="column in sprint.stories[0].fields">
+              <span>
+                {{column.label}}
+              </span>
+            </th>
+          </tr>
+
+          <!-- Lines -->
+
+          <tr ng-repeat="record in sprint.stories" ng-click="redirect(record)" ng-class="{'zebra_off': $index % 2 == 0, 'zebra_on': $index % 2 != 0 }">
+            <td ng-repeat="field in record.fields" class="pointer" >
+              <span>
+                {{field.display_value}}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+	
+  <div class="accordion no-sprints" ng-if="data.sprints.length == 0">
+    <h4 class="center">
+      ${No sprints to display}
+    </h4>
+  </div>
+
+</div>
