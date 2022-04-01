@@ -10,6 +10,10 @@
 	var include = new global.AgilePortalUtils();
 	
 	data.sprints = include.sprintTrackingProjects(data.sys_id);
+	
+	console.log(data.sprints)
+	
+	//data.colorStatus = include.getFieldStyle("change_task")
 		
 	if(input.sprint_validate){
 		var grCase = new GlideRecord("sn_customerservice_case");
@@ -19,7 +23,6 @@
 		grCase.insert();
 	}
 
-	console.log("heloo");
 	
 	
 })();

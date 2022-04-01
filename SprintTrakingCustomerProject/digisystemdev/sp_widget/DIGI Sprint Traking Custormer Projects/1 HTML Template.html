@@ -1,67 +1,60 @@
-<div class="content-list">
-  <h1>Sprints</h1>
-  <div class="accordion sprint" ng-repeat="sprint in data.sprints">
-    <div class="accordion-heading">
-      <div class="left">
+<div class='painel'>
+
+
+  <div class="content-list">
+    <h1>Sprints</h1>
+    <div class="container">
+  
+        <div class="row title">
         
-        <h5 class="name">
-         <!-- <i class="open-accordion fa fa-caret-right" ng-click=""></i>-->
-          {{sprint.name}}
-        </h5>
-        <span class="dates">
-          {{sprint.start_date.split(' ')[0]}}
-        </span>
-        <span class="dates">
-          {{sprint.end_date.split(' ')[0]}}
-        </span>
+            <div class="col-sm-2">Sprint</div>  
+            <div class="col-sm-2">${Initial date}</div>  
+            <div class="col-sm-2">${end date}</div>  
+            <div class="col-sm-2">${Status}</div> 
+            <div class="col-sm-2">${Total stories}</div> 
+            <div class="col-sm-2">${Total Stories points}</div>  
+   
+        </div>
+       
+    </div>
+    
+    <div class='container'>
+      <div class="row align-items-center" ng-repeat="sprint in data.sprints">
+        
+            <span class="col-sm-2">
+              {{sprint.name}}
+            </span>
 
-        <span>
-          {{sprint.state}}
-        </span>
-        <span>
-          {{sprint.storiesCount}}
-        </span>
+            <span class="col-sm-2">
+              {{sprint.start_date.split(' ')[0]}}
+            </span>
+
+            <span class="col-sm-2">
+              {{sprint.end_date.split(' ')[0]}}
+            </span>
+
+            <span class="col-sm-2">
+              {{sprint.state}}
+            </span>
+
+            <span class="col-sm-2">
+              {{sprint.storiesCount}}
+            </span>
+
+            <span class="col-sm-2">
+              {{sprint.points}}
+            </span> 
+
+          
+
       </div>
-      <div class="right">
-        <span class="points">
-          {{sprint.points}}
-        </span> 
-        <button class="btn btn-primary" ng-if="sprint.state == c.options.planning_state" ng-click="validateSprint(sprint)">
-          ${Validate}
-        </button>
+    </div>
+
+        <div class="accordion no-sprints" ng-if="data.sprints.length == 0">
+          <h4 class="center">
+            ${No sprints to display}
+          </h4>
+        </div>
       </div>
 
     </div>
-    <div class="accordion-body" ng-class="{'expand': view[$index] == true}">
-      <table>
-        <tbody>
-          <!-- Columns Name -->
-          <tr>
-            <th ng-repeat="column in sprint.stories[0].fields">
-              <span>
-                {{column.label}}
-              </span>
-            </th>
-          </tr>
-
-          <!-- Lines -->
-
-          <tr ng-repeat="record in sprint.stories" ng-click="redirect(record)" ng-class="{'zebra_off': $index % 2 == 0, 'zebra_on': $index % 2 != 0 }">
-            <td ng-repeat="field in record.fields" class="pointer" >
-              <span>
-                {{field.display_value}}
-              </span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-	
-  <div class="accordion no-sprints" ng-if="data.sprints.length == 0">
-    <h4 class="center">
-      ${No sprints to display}
-    </h4>
-  </div>
-
-</div>
