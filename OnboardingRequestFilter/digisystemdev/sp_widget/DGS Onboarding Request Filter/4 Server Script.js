@@ -9,7 +9,9 @@
 	data.field_filter = options.field_filter;
 	data.enable_states_filter = options.enable_states_filter.split(',');
 	data.group_selected = parseInt($sp.getParameter('group_selected'));
-
+	data.title_variable_display = options.title_variable_display;
+	
+	
 	if(!data.table || !data.field_filter)
 		return;
 
@@ -55,7 +57,7 @@
 	/*
 	 * Criação da Lista de Solicitações
 	 */
-	data.list = utils.getRequestList(data.table, data.new_filter, data.field_list);
+	data.list = utils.getRequestList(data.table, data.new_filter, data.field_list, data.title_variable_display);
 	
 	/*
 	 * Criação do campo de pesquisa de Status

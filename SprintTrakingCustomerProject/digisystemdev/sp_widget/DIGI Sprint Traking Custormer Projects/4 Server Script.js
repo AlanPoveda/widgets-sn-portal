@@ -19,6 +19,7 @@
 		grCase.insert();
 	}
 
+	console.log("heloo");
 	
 	
 })();
