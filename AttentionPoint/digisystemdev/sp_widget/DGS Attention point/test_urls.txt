@@ -1,0 +1,3 @@
+https://digisystemdev.service-now.com/$sp.do?id=sp-preview&sys_id=7f8745c01bb20110f087a79fe54bcbc8
+https://digisystemdev.service-now.com/sp_config?id=dgs__attention_point
+https://digisystemdev.service-now.com/sp?id=dgs__attention_point
