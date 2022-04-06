@@ -1,0 +1,25 @@
+.content{
+ background: #FFF;
+ color: #363636;
+ box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+ border-radius: 1rem;
+}
+
+.status-text {
+    padding: 9px 0;
+    font-family: "Open Sans";
+    font-size: 1.6rem;
+}
+.col-sm-6{
+    h1{
+        margin-top: 1rem;
+    }
+}
+
+.icon{
+    height: 11rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
