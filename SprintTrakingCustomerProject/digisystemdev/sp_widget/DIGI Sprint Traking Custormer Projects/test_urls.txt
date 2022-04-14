@@ -1,3 +1,0 @@
-https://digisystemdev.service-now.com/$sp.do?id=sp-preview&sys_id=f937fcf11beec11056252fc13b4bcb0d
-https://digisystemdev.service-now.com/sp_config?id=digi__sprint_traking_custormer_projects
-https://digisystemdev.service-now.com/sp?id=digi__sprint_traking_custormer_projects

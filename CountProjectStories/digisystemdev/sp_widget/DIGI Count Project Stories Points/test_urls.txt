@@ -1,3 +1,0 @@
-https://digisystemdev.service-now.com/$sp.do?id=sp-preview&sys_id=4b36f91a1b6ac51056252fc13b4bcb26
-https://digisystemdev.service-now.com/sp_config?id=digi__count_project_stories_points
-https://digisystemdev.service-now.com/sp?id=digi__count_project_stories_points

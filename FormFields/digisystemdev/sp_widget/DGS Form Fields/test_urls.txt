@@ -1,3 +1,0 @@
-https://digisystemdev.service-now.com/$sp.do?id=sp-preview&sys_id=21a504d51b964910f087a79fe54bcb98
-https://digisystemdev.service-now.com/sp_config?id=
-https://digisystemdev.service-now.com/sp?id=
