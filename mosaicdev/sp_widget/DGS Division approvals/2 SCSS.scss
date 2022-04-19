@@ -1,0 +1,39 @@
+.buttons{
+  display: flex;
+}
+
+
+.button_approvals{
+  width: 15rem;
+  height: 4.2rem;
+  
+    margin-right: 3px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #D7D7D7;
+  color: #000000;
+
+  border-radius: 6px 6px 0 0;
+  border: none;
+
+}
+
+.button_approvals_active{
+  width: 15rem;
+  height: 4.2rem;
+  
+  margin-right: 3px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 6px 6px 0 0;
+  border: none;
+
+  color: #FFFFFF;
+  background: #01544D;
+}

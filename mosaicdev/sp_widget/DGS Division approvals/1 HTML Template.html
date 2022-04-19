@@ -1,0 +1,13 @@
+<div class="container">
+  <!-- your widget template -->
+  <div class="row buttons">
+    <div clas="col-sm-2" ng-class="{button_approvals: !data.first_active, button_approvals_active: data.first_active}" ng-click="buttonSelected('first')">
+     {{data.title_first_button}}
+    </div>
+    <div class="col-sm-2" ng-class="{button_approvals: !data.second_active, button_approvals_active: data.second_active}" ng-click="buttonSelected('second')">
+      {{data.title_second_button}}
+    </div>
+
+  </div>
+
+</div>

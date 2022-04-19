@@ -1,0 +1,65 @@
+<div class="painel">
+  <div class="content-list">
+    <h1>Sprints</h1>
+    <div class="container">
+      <div class="row title">
+        <div class="col-sm-2">Sprint</div>
+        <div class="col-sm-2">{{data.initial_date}}</div>
+        <div class="col-sm-2">${end date}</div>
+        <div class="col-sm-2">${Approval}</div>
+        <div class="col-sm-2">${Status}</div>
+        <div class="col-sm-1">${Total stories}</div>
+        <div class="col-sm-1">{{data.total_stories_points}}</div>
+      </div>
+    </div>
+
+    <div class="container" >
+      <div
+           class="row align-items-center sprints-itens"
+           ng-repeat="sprint in data.sprints"
+           >
+        <div class="sprint-record" ng-click="c.redirectPage(sprint.sys_id)">
+          <span class="col-sm-2"> {{sprint.name}} </span>
+
+          <span class="col-sm-2">
+            {{sprint.start_date.split(' ')[0]}}
+          </span>
+
+          <span class="col-sm-2">
+            {{sprint.end_date.split(' ')[0]}}
+          </span>
+          
+          <span class="col-sm-2">
+            <span
+                  class="status-color"
+                  style="{{sprint.approval_style}}"
+                  ></span>
+
+            {{sprint.approval}}
+          </span>
+
+          <span class="col-sm-2">
+            <span
+                  class="status-color"
+                  style="{{sprint.field_style}}"
+                  ></span>
+
+            {{sprint.state}}
+          </span>
+
+          <span class="col-sm-1"> {{sprint.storiesCount}} </span>
+
+          <span class="col-sm-1">
+            <span class="story-points">
+              <span class="text-points">{{sprint.points}}</span>
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion no-sprints" ng-if="data.sprints.length == 0">
+      <h4 class="center">${No sprints to display}</h4>
+    </div>
+  </div>
+</div>
