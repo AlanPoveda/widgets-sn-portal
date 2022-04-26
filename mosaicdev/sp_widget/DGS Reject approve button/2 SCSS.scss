@@ -1,0 +1,31 @@
+.container{
+  color: #000;
+}
+
+.buttons{
+  display: flex;
+
+}
+
+
+.select-all{
+  display: flex;
+  span{
+    padding-left: 1rem;
+  }
+}
+
+.approved {
+  background: #01544D;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  border: none;
+}
+
+.reject{
+  margin-left: 2rem;
+  background: #D7D7D7;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  border: none;
+}

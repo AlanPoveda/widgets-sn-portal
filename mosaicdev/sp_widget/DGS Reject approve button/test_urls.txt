@@ -1,0 +1,3 @@
+https://mosaicdev.service-now.com/$sp.do?id=sp-preview&sys_id=20f901681b030950c60aff36cc4bcb03
+https://mosaicdev.service-now.com/sp_config?id=dgs__reject_approve_button
+https://mosaicdev.service-now.com/sp?id=dgs__reject_approve_button
